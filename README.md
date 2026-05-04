@@ -49,21 +49,21 @@ scripts/
 
 ## Data and Model Files
 
-The shared sample files are binary proposition vectors:
+The shared sample files contain binary situation vectors:
 
 - `data/pool_mcmc_samples.csv.gz`: 250,000 Pool MCMC samples, 44 proposition
   columns.
 - `data/sequential_samples.csv.gz`: 250,000 sequential-sampling comparison
   samples, with the same 44 proposition columns in the same order.
 
-The trained competitive model is:
+The trained competitive neural model is:
 
 - `trained_models/competitive_150_units_seed19.npz`: 150 competitive units over
   the same 44 proposition dimensions. The file is included so the reported
-  vector-probability values can be checked immediately, and it can be
+  situation-model-based probability values can be checked immediately; can be
   regenerated with `scripts/train_competitive_model.py`.
 
-The study metadata records the microworld counts used by the analysis scripts:
+The study metadata records the microworld attributes used by the paper / scripts:
 17 entities, 44 atomic propositions, 167 hard constraints, and 28,676 valid
 hard-constraint situations.
 
@@ -102,6 +102,7 @@ Pool MCMC samples, run:
 ```bash
 python scripts/train_competitive_model.py
 ```
+
 The script trains the competitive model on
 `data/pool_mcmc_samples.csv.gz` and rewrites
 `trained_models/competitive_150_units_seed19.npz`. The default training recipe
@@ -115,7 +116,8 @@ Run these commands from the repository root:
 python scripts/generate_paper_tables.py
 python scripts/generate_paper_figures.py
 ```
+
 The table script writes the four TeX table snippets in `outputs/paper_tables/`.
-The figure script writes the paper figure
-`outputs/paper_figures/samples_to_vectors_focused.png` from the shared Pool
+The figure script generates the paper figure in
+`outputs/paper_figures/samples_to_vectors_focused.png` based the shared Pool
 MCMC samples and trained competitive weights.

@@ -1,0 +1,20 @@
+\begin{table}[ht!]
+\centering
+\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Conditional} & \textbf{$P$} \\
+\midrule
+\multicolumn{2}{@{}l@{}}{\textit{Incompatibility ($P \approx 0$)}} \\
+$P(\text{win(charlie)} \mid \text{lose(charlie)})$ & 0.00 \\
+$P(\text{play(charlie,chess)} \mid \text{play(charlie,soccer)})$ & 0.00 \\
+\midrule
+\multicolumn{2}{@{}l@{}}{\textit{Implication ($P \approx 1$)}} \\
+$P(\text{location(charlie,street)} \mid \text{play(charlie,soccer)})$ & 1.00 \\
+$P(\text{play(heidi,ball)} \mid \text{play(heidi,soccer)})$ & 0.99 \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\caption{\small Hard constraints yield extreme conditional probabilities based on the learned situation-model vectors.}
+\label{tab:hard-inference}
+\end{table}

@@ -1,0 +1,107 @@
+{
+  "microworld": {
+    "entities": 17,
+    "atomic_propositions": 44,
+    "hard_constraints": 167,
+    "valid_hard_constraint_situations": 28676,
+    "soft_constraint_parameters": {
+      "win_base_probability": 0.4,
+      "lose_base_probability": 0.4,
+      "specialty_win_multiplier": 1.5,
+      "play_well_win_multiplier": 1.5
+    }
+  },
+  "sampling": {
+    "pool_mcmc": {
+      "path": "data/pool_mcmc_samples.csv.gz",
+      "rows": 250000,
+      "proposition_columns": 44,
+      "sample_values": "binary 0/1",
+      "chain_summary": {
+        "chains": 20,
+        "steps_per_chain_after_burn_in": 50000,
+        "samples_per_chain_post_thinning": 12500,
+        "proposition_columns": 44
+      },
+      "pool_mcmc_parameters": {
+        "chains": 20,
+        "steps_per_chain": 60000,
+        "burn_in_steps": 10000,
+        "thinning": 4,
+        "final_samples": 250000,
+        "proposal_fixed_propositions": 29
+      },
+      "sha256": "afc5bbacfc50206f63f93db58b793c58b5ac2a352b576553d45355be00547b61",
+      "bytes": 573051
+    },
+    "sequential": {
+      "path": "data/sequential_samples.csv.gz",
+      "rows": 250000,
+      "proposition_columns": 44,
+      "sample_values": "binary 0/1",
+      "sample_summary": {
+        "chains": 20,
+        "samples_per_chain": 12500,
+        "proposition_columns": 44
+      },
+      "sha256": "5ec6ae861b084f60c7816e0269ccef0cf026cc329fc3c0555e0865400efafb6b",
+      "bytes": 1280886
+    }
+  },
+  "competitive_model": {
+    "units": 150,
+    "proposition_dimensions": 44,
+    "trained_weights_path": "trained_models/competitive_150_units_seed19.npz",
+    "trained_weight_arrays": {
+      "weights": {
+        "shape": [150, 44],
+        "dtype": "float64"
+      },
+      "biases": {
+        "shape": [150],
+        "dtype": "float64"
+      },
+      "config": {
+        "shape": [],
+        "dtype": "object"
+      },
+      "feature_names": {
+        "shape": [44],
+        "dtype": "object"
+      }
+    },
+    "default_training_config": {
+      "n_epochs": 30,
+      "initial_weight_value": 0.5,
+      "initial_bias_value": 1.0,
+      "initial_weight_lr": 0.3,
+      "final_weight_lr": 0.05,
+      "initial_bias_lr": 0.0001,
+      "final_bias_lr": 0.00001,
+      "random_seed": 19,
+      "rng": "numpy.random.default_rng"
+    },
+    "probability_correlation_checks": {
+      "random_seed": 19,
+      "prior": {
+        "value": 0.999847985288407,
+        "paper_rounded_value": "1.000"
+      },
+      "conjunction": {
+        "value": 0.999562703303643,
+        "paper_rounded_value": "1.000"
+      },
+      "conditional": {
+        "value": 0.997440302033339,
+        "paper_rounded_value": "0.997"
+      }
+    }
+  },
+  "sampling_comparison_checks": {
+    "pairwise_conditionals": 1892,
+    "correlation": 0.7546,
+    "mean_absolute_delta": 0.1262,
+    "max_absolute_delta": 0.5870,
+    "mean_delta": 0.0221
+  }
+}

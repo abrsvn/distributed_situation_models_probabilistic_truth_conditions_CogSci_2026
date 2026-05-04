@@ -1,0 +1,24 @@
+\begin{table}[ht!]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Conditional} & \textbf{Pool} & \textbf{Seq.} & \textbf{$\Delta$} \\
+\midrule
+$P(\text{win}|\text{play\_well})$ Charlie & 0.76 & 0.52 & +0.24 \\
+$P(\text{win}|\text{play\_well})$ Heidi & 0.93 & 0.53 & +0.40 \\
+$P(\text{win}|\text{play\_well})$ Sophia & 0.90 & 0.53 & +0.37 \\
+$P(\text{lose}|\text{play\_badly})$ Charlie & 0.97 & 0.58 & +0.38 \\
+$P(\text{win}|\text{specialty})$ Charlie & 0.89 & 0.46 & +0.43 \\
+$P(\text{win}|\text{specialty})$ Heidi & 0.89 & 0.43 & +0.47 \\
+$P(\text{win}|\text{specialty})$ Sophia & 0.84 & 0.43 & +0.41 \\
+\midrule
+$P(\text{win}|\text{lose})$ & 0.00 & 0.00 & 0.00 \\
+$P(\text{street}|\text{soccer})$ & 1.00 & 1.00 & 0.00 \\
+$P(\text{ball}|\text{soccer})$ & 1.00 & 1.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\caption{\small Cond.\ prob.s estimated from Pool MCMC vs.\ seq.\ samples. Soft constraints (top) show large discrepancies; hard constraints (bottom, not dependent on sampling order) agree.}
+\label{tab:sampling-comparison}
+\end{table}

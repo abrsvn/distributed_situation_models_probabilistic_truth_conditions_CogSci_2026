@@ -1,0 +1,17 @@
+\begin{table}[ht!]
+\centering
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Conditional} & \textbf{$P(p|q)$} & \textbf{Prior $P(p)$} \\
+\midrule
+$P(\text{win(C)} \mid \text{play\_manner(C, well)})$ & 0.74 & 0.08 \\
+$P(\text{lose(C)} \mid \text{play\_manner(C, badly)})$ & 0.96 & 0.40 \\
+$P(\text{win(with\_ease)} \mid \text{win(C)} \; \land$ & 0.76 & 0.66 \\
+\phantom{$P(\text{win(with\_ease)} \mid$} $\text{play(C, chess)})$ &  &  \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\caption{\small Soft constraints yield elevated conditional probabilities $P(p|q)$. Prior probabilities $P(p)$ shown for comparison.}
+\label{tab:soft-inference}
+\end{table}

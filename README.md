@@ -2,7 +2,7 @@
 
 This repository accompanies the paper "Distributed Situation Models: Probabilistic Representations of Truth Conditions." (Brasoveanu, CogSci 2026)
 
-Paper PDF: [Distributed_Situation_Models_Probabilistic_Truth_Conditions_CogSci26.pdf](./Distributed_Situation_Models_Probabilistic_Truth_Conditions_CogSci26.pdf)
+Paper PDF: [Distributed_Situation_Models_Probabilistic_Truth_Conditions_CogSci26.pdf](./Distributed_Situation_Models_Probabilistic_Truth_Conditions_CogSci26.pdf) (the official proceedings paper is available [here](https://escholarship.org/uc/item/6tr9s8pz))
 
 > In formal semantics, the interpretation function maps linguistic expressions “the pencil is in the cup” to set-theoretic objects `in(pencil, cup)` that mirror the compositional structure of the sentence, but do not encode soft inferences like “the pencil is vertical” that human comprehenders automatically make. Distributed situation models (Frank et al., 2009) were proposed as Gestalt / distributed representations of sentence meanings that enable direct probabilistic inference from their representational geometry. We show that previous implementations of distributed situation models systematically underestimate probabilistic inferences because of their sequential sampling of situations (possible worlds). We propose generating the truth-conditional training data using Markov Chain Monte Carlo sampling over a precomputed pool of valid situations, so that soft constraints are correctly evaluated on complete situations rather than partial ones. Training a competitive neural model on 250,000 MCMC samples yields distributed situation models that accurately encode these inferences, providing reliable, rich meaning representations for cognitive models of language comprehension.
 
